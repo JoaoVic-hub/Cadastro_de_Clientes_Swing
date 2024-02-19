@@ -19,7 +19,7 @@ public class Cliente {
     private Long cpf;
     private Long tel;
     
-    Cliente(String nome, String cpf, String tel , String endereco, String numero, String cidade, String estado){
+    public Cliente(String nome, String cpf, String tel , String endereco, String numero, String cidade, String estado){
         this.nome = nome;
         this.cpf = Long.valueOf(cpf.trim());
         this.tel = Long.valueOf(tel.trim());

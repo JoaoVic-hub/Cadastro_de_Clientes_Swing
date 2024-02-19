@@ -7,13 +7,15 @@ package CadastroSwingDAO;
 import CadastroSwingDomain.Cliente;
 import java.util.Map;
 import java.util.TreeMap;
+import java.util.HashMap;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author jvict
  */
 public class MapClienteDAO implements IClienteDAO {
-    Map <Long , String> map;
+    Map <Long , Cliente> map;
     
     public MapClienteDAO(){
         this.map = new TreeMap<>();
@@ -38,7 +40,6 @@ public class MapClienteDAO implements IClienteDAO {
         if(map.containsKey(cliente.getCpf())){
             Cliente cli = map.get(cliente.getCpf());
             cli.setCidade(cliente.getCidade());
-            cli.setCpf(cliente.getCpf());
             cli.setEndereco(cliente.getEndereco());
             cli.setNome(cliente.getNome());
             cli.setTel(cliente.getTel());
