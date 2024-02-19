@@ -34,6 +34,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenuItem1 = new javax.swing.JMenuItem();
         lblNome = new javax.swing.JLabel();
         txtNome = new javax.swing.JTextField();
         btnSalvar = new javax.swing.JButton();
@@ -43,9 +44,22 @@ public class TelaPrincipal extends javax.swing.JFrame {
         tabelaClientes = new javax.swing.JTable();
         btnExcuir = new javax.swing.JButton();
         btnAtualizar = new javax.swing.JButton();
+        lblTel = new javax.swing.JLabel();
+        txtTel = new javax.swing.JTextField();
+        lblNumero = new javax.swing.JLabel();
+        txtNumero = new javax.swing.JTextField();
+        lblEstado = new javax.swing.JLabel();
+        txtEstado = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        txtEndereco = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        txtCidade = new javax.swing.JTextField();
+        btnLimpar = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         menuItemSair = new javax.swing.JMenuItem();
+
+        jMenuItem1.setText("jMenuItem1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -92,6 +106,23 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
 
+        lblTel.setText("Telefone:");
+
+        lblNumero.setText("Numero:");
+
+        lblEstado.setText("Estado:");
+
+        jLabel1.setText("Endereço:");
+
+        jLabel2.setText("Cidade:");
+
+        btnLimpar.setText("Limpar");
+        btnLimpar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimparActionPerformed(evt);
+            }
+        });
+
         jMenu1.setText("Opcoes");
 
         menuItemSair.setText("Sair");
@@ -110,27 +141,49 @@ public class TelaPrincipal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(65, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 492, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(66, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(14, 14, 14)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnExcuir, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnAtualizar))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(lblNome, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addComponent(lblEstado, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtEstado, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addComponent(lblNumero, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtNumero))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblTel)
+                                    .addComponent(lblNome, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtNome)
+                                    .addComponent(txtTel))))
                         .addGap(18, 18, 18)
-                        .addComponent(lblCpf, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblCpf, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(12, 12, 12)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtCpf)
+                            .addComponent(txtEndereco)
+                            .addComponent(txtCidade, javax.swing.GroupLayout.DEFAULT_SIZE, 213, Short.MAX_VALUE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btnSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtCpf, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(65, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 492, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnExcuir, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnAtualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnLimpar, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -143,14 +196,31 @@ public class TelaPrincipal extends javax.swing.JFrame {
                         .addComponent(lblCpf)
                         .addComponent(txtCpf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(lblNome))
-                .addGap(56, 56, 56)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnSalvar)
-                    .addComponent(btnExcuir)
-                    .addComponent(btnAtualizar))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(30, Short.MAX_VALUE))
+                    .addComponent(lblTel)
+                    .addComponent(txtTel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1)
+                    .addComponent(txtEndereco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblNumero)
+                    .addComponent(txtNumero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2)
+                    .addComponent(txtCidade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblEstado)
+                    .addComponent(txtEstado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(14, 14, 14)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnAtualizar)
+                    .addComponent(btnLimpar)
+                    .addComponent(btnSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnExcuir))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         pack();
@@ -166,17 +236,22 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
         String nome = txtNome.getText();
         String cpf = txtCpf.getText();
+        String tel = txtTel.getText();
+        String endereco = txtEndereco.getText();
+        String numero = txtNumero.getText();
+        String cidade = txtCidade.getText();
+        String estado = txtEstado.getText();
         
-        if(!isCamposValidos(nome, cpf)){ 
+        if(!isCamposValidos(nome, cpf, tel, endereco, numero, cidade, estado)){ 
             JOptionPane.showMessageDialog(null, "Existem campos a serem preenchidos", "ATENÇÃO", JOptionPane.INFORMATION_MESSAGE);
             return;
         }
         
-        Cliente cliente = new Cliente(nome, cpf, cpf, null, cpf, null, null);
+        Cliente cliente = new Cliente(nome, cpf, tel, endereco, numero, cidade, estado);
         Boolean isCadastrado = iCliente.cadastrar(cliente);
         if(isCadastrado){
             JOptionPane.showMessageDialog(null, "Cliente cadastrado com sucesso!!!", "Cadastro", JOptionPane.INFORMATION_MESSAGE);
-            modelo.addRow(new Object[] {cliente.getNome(), cliente.getCpf()});
+            modelo.addRow(new Object[] {cliente.getNome(), cliente.getCpf(), cliente.getTel(), cliente.getEndereco(), cliente.getNumero(), cliente.getCidade(), cliente.getEstado()});
             limparCampos();
         }else{
             JOptionPane.showMessageDialog(null, "Cliente já cadastrado!!!", "ATENÇÃO", JOptionPane.INFORMATION_MESSAGE);
@@ -190,6 +265,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
         Cliente cliente = this.iCliente.consultar(cpf);
         txtNome.setText(cliente.getNome());
         txtCpf.setText(cliente.getCpf().toString());
+        txtTel.setText(cliente.getTel().toString());
+        txtEndereco.setText(cliente.getEndereco());
+        txtNumero.setText(cliente.getNumero().toString()); 
+        txtCidade.setText(cliente.getCidade());
+        txtEstado.setText(cliente.getEstado());
     }//GEN-LAST:event_tabelaClientesMouseClicked
 
     private void btnExcuirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcuirActionPerformed
@@ -212,11 +292,17 @@ public class TelaPrincipal extends javax.swing.JFrame {
         if(linhaEndereco >= 0){
             String Nome = txtNome.getText();
             String CPF = txtCpf.getText();
-            if(isCamposValidos(Nome, CPF)){
-                Cliente cliente  = new Cliente(Nome, CPF, CPF, null, CPF, null, null);
+            String tel = txtTel.getText();
+            String endereco = txtEndereco.getText();
+            String numero = txtNumero.getText();
+            String cidade = txtCidade.getText();
+            String estado = txtEstado.getText();
+        
+            if(isCamposValidos(Nome, CPF, tel, endereco, numero, cidade, estado)){
+                Cliente cliente  = new Cliente(Nome, CPF, tel, endereco, numero, cidade, estado);
                 iCliente.alterar(cliente);
                 modelo.removeRow(linhaEndereco);
-                modelo.addRow(new Object [] { cliente.getNome(), cliente.getCpf()});
+                modelo.addRow(new Object [] { cliente.getNome(), cliente.getCpf(), cliente.getTel(), cliente.getEndereco(), cliente.getNumero(), cliente.getCidade(), cliente.getEstado() });
             }else{
                 JOptionPane.showMessageDialog(null, "Existem campos a serem preenchidos", "ATENÇÃO", JOptionPane.INFORMATION_MESSAGE);
                 return;
@@ -225,6 +311,10 @@ public class TelaPrincipal extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Nenhum cliente selecionado", "ATENÇÃO", JOptionPane.INFORMATION_MESSAGE);
         }
     }//GEN-LAST:event_btnAtualizarActionPerformed
+
+    private void btnLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimparActionPerformed
+        limparCampos();
+    }//GEN-LAST:event_btnLimparActionPerformed
 
     /**
      * @param args the command line arguments
@@ -264,16 +354,28 @@ public class TelaPrincipal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAtualizar;
     private javax.swing.JButton btnExcuir;
+    private javax.swing.JButton btnLimpar;
     private javax.swing.JButton btnSalvar;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblCpf;
+    private javax.swing.JLabel lblEstado;
     private javax.swing.JLabel lblNome;
+    private javax.swing.JLabel lblNumero;
+    private javax.swing.JLabel lblTel;
     private javax.swing.JMenuItem menuItemSair;
     private javax.swing.JTable tabelaClientes;
+    private javax.swing.JTextField txtCidade;
     private javax.swing.JTextField txtCpf;
+    private javax.swing.JTextField txtEndereco;
+    private javax.swing.JTextField txtEstado;
     private javax.swing.JTextField txtNome;
+    private javax.swing.JTextField txtNumero;
+    private javax.swing.JTextField txtTel;
     // End of variables declaration//GEN-END:variables
 
     private boolean isCamposValidos(String ...campos) {
@@ -288,6 +390,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private void initCustomComponents() {
         modelo.addColumn("Nome");
         modelo.addColumn("CPF");
+        modelo.addColumn("Telefone");
+        modelo.addColumn("Endereço");
+        modelo.addColumn("Numero");
+        modelo.addColumn("Cidade");
+        modelo.addColumn("Estado");
         
         tabelaClientes.setModel(modelo);
     }
@@ -295,6 +402,12 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private void limparCampos() {
         txtNome.setText("");
         txtCpf.setText("");
+        txtTel.setText("");
+        txtEndereco.setText("");
+        txtNumero.setText("");
+        txtCidade.setText("");
+        txtEstado.setText("");
+
             
     }
     
